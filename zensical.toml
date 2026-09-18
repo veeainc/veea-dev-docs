@@ -1,0 +1,239 @@
+[project]
+site_name = "VeeaONE Developer Docs"
+site_description = "Build, deploy, and operate containerized applications and AI workloads with VeeaONE, VHT 2.0, VeeaHubs, Linux, and qualified NVIDIA Jetson targets."
+site_url = "https://__SITE_DOMAIN__/"
+docs_dir = "docs"
+site_dir = "site"
+extra_css = ["https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap", "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css", "stylesheets/vht-docs.css?v=20260715-release-readiness"]
+extra_javascript = ["javascripts/vht-docs.js?v=20260731-desktop-search", "javascripts/docsbot.js?v=20260715-privacy-gate"]
+
+nav = [
+  { "Home" = "index.md" },
+  { "VeeaONE Runtime" = [
+    { "Overview" = "platform/veeone-runtime.md" },
+    { "Quickstart" = "platform/quickstart.md" },
+    { "Prepare a Runtime Target" = "platform/prepare-runtime-target.md" },
+    { "Prepare the Platform" = [
+      { "x86 Virtual Machine" = "platform/prepare/x86-virtual-machine.md" },
+      { "x86 Physical Hardware" = "platform/prepare/x86-physical.md" },
+      { "NVIDIA Jetson Developer Kits" = "platform/prepare/nvidia-jetson.md" },
+      { "SeeedStudio reComputer / reServer" = "platform/prepare/seeedstudio-jetson.md" }
+    ] },
+    { "Install and Enroll" = [
+      { "Install the Middleware" = "platform/runtime/install-middleware.md" },
+      { "Register with the Veea Cloud" = "platform/runtime/register.md" },
+      { "Enroll onto a Mesh" = "platform/runtime/enroll.md" },
+      { "Check Status" = "platform/runtime/check-status.md" }
+    ] },
+    { "Runtime Targets" = [
+      { "Overview" = "platform/runtime-targets/overview.md" },
+      { "VeeaHubs" = "platform/runtime-targets/veeahubs.md" },
+      { "Linux / Ubuntu" = "platform/runtime-targets/linux-ubuntu.md" },
+      { "NVIDIA Jetson" = "platform/runtime-targets/nvidia-jetson.md" },
+      { "Other Hardware" = "platform/runtime-targets/other-hardware.md" },
+      { "Capability Profiles" = "platform/runtime-targets/runtime-capabilities.md" }
+    ] },
+    { "Reference" = [
+      { "Command Reference" = "platform/reference/veea-command-reference.md" },
+      { "Supported Platforms" = "platform/reference/supported-platforms.md" }
+    ] }
+  ] },
+  { "VHT 2.0" = [
+    { "VHT 2.0" = "vht-2.0/overview.md" },
+    { "Quickstart" = "vht-2.0/quickstart.md" },
+    "vht-2.0/prerequisites.md",
+    { "Developer onboarding" = [
+      { "Become a Veea developer" = "vht-2.0/developer-onboarding/register-as-developer.md" },
+      "vht-2.0/developer-onboarding/create-veea-account.md",
+      "vht-2.0/developer-onboarding/enroll-veeahub.md",
+      "vht-2.0/developer-onboarding/enable-development-mode.md",
+      "vht-2.0/developer-onboarding/onboarding-notes.md"
+    ] },
+    { "Install" = [
+      "vht-2.0/install/install-vht.md",
+      "vht-2.0/install/partner-details.md",
+      "vht-2.0/install/partner-credentials.md",
+      "vht-2.0/install/feature-licenses.md"
+    ] },
+    { "Hubs" = [
+      "vht-2.0/hubs/manage-veeahubs.md",
+      "vht-2.0/hubs/add-show-ping-remove.md",
+      "vht-2.0/hubs/upload-remove-feature-licenses.md"
+    ] },
+    { "Docker" = [
+      "vht-2.0/docker/install-docker.md",
+      "vht-2.0/docker/docker-api-version.md",
+      "vht-2.0/docker/docker-context.md",
+      "vht-2.0/docker/run-containers-on-veeahub.md"
+    ] },
+    { "Registries" = [
+      "vht-2.0/registries/overview.md",
+      "vht-2.0/registries/insecure-registry.md",
+      "vht-2.0/registries/secure-registry.md",
+      "vht-2.0/registries/buildx-builders.md"
+    ] },
+    { "Deployment" = [
+      "vht-2.0/deployment/compose-vs-stack.md",
+      "vht-2.0/deployment/example-build.md",
+      "vht-2.0/deployment/docker-compose.md",
+      "vht-2.0/deployment/docker-stack.md"
+    ] },
+    { "Validation Plans" = [
+      { "Overview" = "vht-2.0/validation-plans/overview.md" },
+      { "VHT 1.x App Baseline" = "vht-2.0/validation-plans/vht-1x-app-baseline.md" },
+      { "Hub Upgrade Compatibility" = "vht-2.0/validation-plans/hub-upgrade-compatibility.md" },
+      { "VHT 2.0 First App" = "vht-2.0/validation-plans/vht-2-first-app.md" },
+      { "VHT 1.x + VHT 2.0 Coexistence" = "vht-2.0/validation-plans/coexistence-test.md" },
+      { "VHC25 Edge Diagnostics App" = "vht-2.0/validation-plans/vhc25-edge-diagnostics-app.md" }
+    ] },
+    { "Reference" = [
+      { "Command Reference" = "vht-2.0/reference/command-reference.md" },
+      { "Troubleshooting" = "vht-2.0/reference/troubleshooting.md" },
+      "vht-2.0/reference/known-constraints.md"
+    ] }
+  ] },
+  { "VHT 1.x" = [
+    "vht-1.0/overview.md",
+    { "Quickstart" = "vht-1.0/quickstart.md" },
+    { "The Toolkit" = [
+      { "Overview" = "vht-1.0/toolkit/overview.md" },
+      { "Installation" = "vht-1.0/toolkit/installation.md" },
+      { "The VeeaHub Client (VHC)" = "vht-1.0/toolkit/veeahub-client.md" },
+      { "Template Catalog" = "vht-1.0/toolkit/template-catalog.md" }
+    ] },
+    { "Development Hubs" = [
+      { "Overview" = "vht-1.0/development-hubs/overview.md" },
+      { "Hub Preparation" = "vht-1.0/development-hubs/hub-preparation.md" },
+      { "Hubs in VHC" = "vht-1.0/development-hubs/hubs-in-vhc.md" },
+      { "Hub Interaction" = "vht-1.0/development-hubs/hub-interaction.md" }
+    ] },
+    { "Examples" = [
+      { "Templates" = [
+        { "Overview" = "vht-1.0/examples/templates/overview.md" },
+        { "Instantiation" = "vht-1.0/examples/templates/instantiation.md" },
+        { "Configuration" = "vht-1.0/examples/templates/configuration.md" },
+        { "Build" = "vht-1.0/examples/templates/build.md" },
+        { "Upload and Test" = "vht-1.0/examples/templates/upload-and-test.md" }
+      ] },
+      { "Advanced" = [
+        { "Overview" = "vht-1.0/examples/advanced/overview.md" },
+        { "Published Ports" = "vht-1.0/examples/advanced/published-ports.md" },
+        { "Build Options" = "vht-1.0/examples/advanced/build-options.md" },
+        { "Device Access" = "vht-1.0/examples/advanced/device-access.md" },
+        { "Container Configuration" = "vht-1.0/examples/advanced/container-configuration.md" },
+        { "Volumes" = "vht-1.0/examples/advanced/volumes.md" },
+        { "Container Backup and Restore" = "vht-1.0/examples/advanced/container-backup-and-restore.md" },
+        { "Remote Container Access" = "vht-1.0/examples/advanced/remote-container-access.md" }
+      ] },
+      { "Mesh-enabled" = [
+        { "Overview" = "vht-1.0/examples/mesh/overview.md" },
+        { "Instantiation" = "vht-1.0/examples/mesh/instantiation.md" },
+        { "Configuration" = "vht-1.0/examples/mesh/configuration.md" },
+        { "Build" = "vht-1.0/examples/mesh/build.md" },
+        { "Upload and Test" = "vht-1.0/examples/mesh/upload-and-test.md" }
+      ] }
+    ] },
+    { "Signed Images" = [
+      { "Overview" = "vht-1.0/signed-images/overview.md" },
+      { "Partner Credential Installation" = "vht-1.0/signed-images/partner-credential-installation.md" },
+      { "A Simple Signed Image Example" = "vht-1.0/signed-images/simple-signed-image.md" },
+      { "A Signed Image with Feature Licenses" = "vht-1.0/signed-images/feature-licenses.md" },
+      { "Image Release Archives" = "vht-1.0/signed-images/image-release-archives.md" }
+    ] },
+    { "Applications" = [
+      { "Overview" = "vht-1.0/applications/overview.md" },
+      { "Creation and Configuration" = "vht-1.0/applications/creation-and-configuration.md" },
+      { "Build and Verification" = "vht-1.0/applications/build-and-verification.md" },
+      { "Test" = "vht-1.0/applications/test.md" },
+      { "Release" = "vht-1.0/applications/release.md" },
+      { "Remote Access to Containers" = "vht-1.0/applications/remote-access-to-containers.md" },
+      { "Dynamic Container Configuration and State" = "vht-1.0/applications/dynamic-container-configuration-and-state.md" }
+    ] },
+    { "Validated Workflows" = [
+      { "Overview" = "vht-1.0/validated-workflows.md" },
+      { "Control Center UI Links" = "vht-1.0/control-center-ui-links.md" },
+      { "Web UI Proxy Compatibility" = "vht-1.0/web-ui-proxy-compatibility.md" }
+    ] },
+    { "D-Bus API" = [
+      { "API Documentation" = "vht-1.0/dbus/api-documentation.md" },
+      { "Data Types" = "vht-1.0/dbus/data-types.md" },
+      { "io.veea.VeeaHub.BluetoothConfig" = "vht-1.0/api-reference/io-veea-veeahub-bluetoothconfig.md" },
+      { "io.veea.VeeaHub.BluetoothMonitor" = "vht-1.0/api-reference/io-veea-veeahub-bluetoothmonitor.md" },
+      { "io.veea.VeeaHub.Cellular.Status" = "vht-1.0/api-reference/io-veea-veeahub-cellular-status.md" },
+      { "io.veea.VeeaHub.ContainerControl" = "vht-1.0/api-reference/io-veea-veeahub-containercontrol.md" },
+      { "io.veea.VeeaHub.DateTime" = "vht-1.0/api-reference/io-veea-veeahub-datetime.md" },
+      { "io.veea.VeeaHub.HardwareControl.SerialPort" = "vht-1.0/api-reference/io-veea-veeahub-hardwarecontrol-serialport.md" },
+      { "io.veea.VeeaHub.HardwareMonitoringDaemon.Container" = "vht-1.0/api-reference/io-veea-veeahub-hardwaremonitoringdaemon-container.md" },
+      { "io.veea.VeeaHub.Info" = "vht-1.0/api-reference/io-veea-veeahub-info.md" },
+      { "io.veea.VeeaHub.Licenses" = "vht-1.0/api-reference/io-veea-veeahub-licenses.md" },
+      { "io.veea.VeeaHub.MqttControl" = "vht-1.0/api-reference/io-veea-veeahub-mqttcontrol.md" },
+      { "io.veea.VeeaHub.NetworkControl.WiFi" = "vht-1.0/api-reference/io-veea-veeahub-networkcontrol-wifi.md" },
+      { "io.veea.VeeaHub.Networking" = "vht-1.0/api-reference/io-veea-veeahub-networking.md" },
+      { "io.veea.VeeaHub.ReverseProxy" = "vht-1.0/api-reference/io-veea-veeahub-reverseproxy.md" },
+      { "io.veea.VeeaHub.SystemConfiguration.Containers" = "vht-1.0/api-reference/io-veea-veeahub-systemconfiguration-containers.md" },
+      { "io.veea.VeeaHub.WiFi.DataElements" = "vht-1.0/api-reference/io-veea-veeahub-wifi-dataelements.md" },
+      { "io.veea.VeeaHub.Wireless.Stats" = "vht-1.0/api-reference/io-veea-veeahub-wireless-stats.md" }
+    ] },
+    { "Reference" = [
+      { "Command Reference" = "vht-1.0/reference/command-reference.md" },
+      { "Troubleshooting" = "vht-1.0/reference/troubleshooting.md" },
+      { "Glossary" = "vht-1.0/reference/glossary.md" },
+      { "Release Notes" = "vht-1.0/reference/release-notes.md" },
+      { "About This Guide" = "vht-1.0/reference/about-this-guide.md" }
+    ] }
+  ] }
+]
+
+[project.extra]
+generator = false
+
+[project.theme]
+language = "en"
+custom_dir = "overrides"
+logo = "assets/brand/veea-logo-red.svg"
+favicon = "assets/brand/veea-favicon.svg"
+features = [
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "navigation.indexes",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight"
+]
+
+[project.markdown_extensions.abbr]
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.toc]
+permalink = true
+[project.markdown_extensions.pymdownx.betterem]
+[project.markdown_extensions.pymdownx.caret]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.emoji]
+emoji_generator = "zensical.extensions.emoji.to_svg"
+emoji_index = "zensical.extensions.emoji.twemoji"
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.keys]
+[project.markdown_extensions.pymdownx.magiclink]
+[project.markdown_extensions.pymdownx.mark]
+[project.markdown_extensions.pymdownx.smartsymbols]
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+combine_header_slug = true
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
+[project.markdown_extensions.pymdownx.tilde]

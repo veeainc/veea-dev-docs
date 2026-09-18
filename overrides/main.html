@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {% if page.meta and page.meta.title %}
+    {% set social_title = page.meta.title ~ " - " ~ config.site_name %}
+  {% elif page.title and not page.is_homepage %}
+    {% set social_title = page.title ~ " - " ~ config.site_name %}
+  {% else %}
+    {% set social_title = config.site_name %}
+  {% endif %}
+  {% if page.meta and page.meta.description %}
+    {% set social_description = page.meta.description %}
+  {% else %}
+    {% set social_description = config.site_description %}
+  {% endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:title" content="{{ social_title }}">
+  <meta property="og:description" content="{{ social_description }}">
+  <meta property="og:url" content="{{ page.canonical_url }}">
+  <meta property="og:image" content="{{ config.site_url }}assets/brand/veeaone-developer-docs-social.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="VeeaONE Developer Platform">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ social_title }}">
+  <meta name="twitter:description" content="{{ social_description }}">
+  <meta name="twitter:image" content="{{ config.site_url }}assets/brand/veeaone-developer-docs-social.png">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "VeeaONE Developer Docs",
+      "url": "https://__SITE_DOMAIN__/",
+      "description": "Build, deploy, and operate containerized applications and AI workloads with VeeaONE."
+    }
+  </script>
+{% endblock %}

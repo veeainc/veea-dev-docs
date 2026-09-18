@@ -1,0 +1,69 @@
+# VeeaONE Developer Docs
+
+> Developer documentation for understanding VeeaONE Runtime, preparing runtime targets, and building and deploying edge applications with VHT.
+
+Base URL: https://__CANONICAL_DOMAIN__/
+
+## Start here
+
+- [Developer portal home](https://__CANONICAL_DOMAIN__/): Platform orientation, developer paths, runtime targets, and documentation entry points.
+- [VeeaONE Runtime](https://__CANONICAL_DOMAIN__/platform/veeone-runtime/): Runtime architecture and relationship between VeeaONE, VeeaHubs, qualified targets, and VHT.
+- [VeeaONE Runtime quickstart](https://__CANONICAL_DOMAIN__/platform/quickstart/): Prepare, install, register, enroll, and validate a Runtime target.
+- [VHT 2.0 overview](https://__CANONICAL_DOMAIN__/vht-2.0/overview/): Current Docker-native developer workflow.
+- [VHT 2.0 quickstart](https://__CANONICAL_DOMAIN__/vht-2.0/quickstart/): Build and deploy a first VHT 2.0 application.
+
+## VeeaONE Runtime
+
+- [Prepare a Runtime target](https://__CANONICAL_DOMAIN__/platform/prepare-runtime-target/)
+- [Install the Runtime middleware](https://__CANONICAL_DOMAIN__/platform/runtime/install-middleware/)
+- [Register with the Veea Cloud](https://__CANONICAL_DOMAIN__/platform/runtime/register/)
+- [Enroll onto a mesh](https://__CANONICAL_DOMAIN__/platform/runtime/enroll/)
+- [Check Runtime status](https://__CANONICAL_DOMAIN__/platform/runtime/check-status/)
+- [Runtime target overview](https://__CANONICAL_DOMAIN__/platform/runtime-targets/overview/)
+- [VeeaHub targets](https://__CANONICAL_DOMAIN__/platform/runtime-targets/veeahubs/)
+- [Linux and Ubuntu targets](https://__CANONICAL_DOMAIN__/platform/runtime-targets/linux-ubuntu/)
+- [NVIDIA Jetson targets](https://__CANONICAL_DOMAIN__/platform/runtime-targets/nvidia-jetson/)
+- [Other qualified hardware](https://__CANONICAL_DOMAIN__/platform/runtime-targets/other-hardware/)
+- [Runtime capability profiles](https://__CANONICAL_DOMAIN__/platform/runtime-targets/runtime-capabilities/)
+- [Supported platforms](https://__CANONICAL_DOMAIN__/platform/reference/supported-platforms/)
+- [Veea command reference](https://__CANONICAL_DOMAIN__/platform/reference/veea-command-reference/)
+
+## VHT 2.0
+
+- [Prerequisites](https://__CANONICAL_DOMAIN__/vht-2.0/prerequisites/)
+- [Install VHT 2.0](https://__CANONICAL_DOMAIN__/vht-2.0/install/install-vht/)
+- [Developer onboarding](https://__CANONICAL_DOMAIN__/vht-2.0/developer-onboarding/register-as-developer/)
+- [Manage VeeaHubs](https://__CANONICAL_DOMAIN__/vht-2.0/hubs/manage-veeahubs/)
+- [Docker API compatibility](https://__CANONICAL_DOMAIN__/vht-2.0/docker/docker-api-version/)
+- [Docker contexts](https://__CANONICAL_DOMAIN__/vht-2.0/docker/docker-context/)
+- [Run containers on a VeeaHub](https://__CANONICAL_DOMAIN__/vht-2.0/docker/run-containers-on-veeahub/)
+- [Registry overview](https://__CANONICAL_DOMAIN__/vht-2.0/registries/overview/)
+- [Compose and Stack](https://__CANONICAL_DOMAIN__/vht-2.0/deployment/compose-vs-stack/)
+- [VHT 2.0 command reference](https://__CANONICAL_DOMAIN__/vht-2.0/reference/command-reference/)
+- [Troubleshooting](https://__CANONICAL_DOMAIN__/vht-2.0/reference/troubleshooting/)
+- [Known constraints](https://__CANONICAL_DOMAIN__/vht-2.0/reference/known-constraints/)
+
+## VHT 1.x legacy documentation
+
+- [VHT 1.x overview](https://__CANONICAL_DOMAIN__/vht-1.0/overview/): Legacy workflow for maintaining existing VHT 1.x applications.
+- [VHT 1.x quickstart](https://__CANONICAL_DOMAIN__/vht-1.0/quickstart/)
+- [VHT 1.x validated workflows](https://__CANONICAL_DOMAIN__/vht-1.0/validated-workflows/)
+- [VHT 1.x command reference](https://__CANONICAL_DOMAIN__/vht-1.0/reference/command-reference/)
+- [VHT 1.x troubleshooting](https://__CANONICAL_DOMAIN__/vht-1.0/reference/troubleshooting/)
+- [VHT 1.x D-Bus API](https://__CANONICAL_DOMAIN__/vht-1.0/dbus/api-documentation/)
+
+## Interpretation guidance
+
+- VHT 2.0 uses the `vhc2` command and is the documented Docker-native workflow for new development.
+- VHT 1.x uses the `vhc` command and remains available for existing applications that have not migrated.
+- VeeaONE Runtime runs on the target. VHT runs on the developer host and deploys applications to the target.
+- Runtime capabilities vary by hardware target. Consult the supported-platform and capability-profile pages before drawing production conclusions.
+- Treat exact software versions, supported targets, registry behavior, and production constraints as version-specific. Prefer the corresponding reference page over general summaries.
+
+## Current support boundary
+
+- Supported third-party x86-64 targets currently use Ubuntu Server 22.04 LTS. Physical systems and virtual machines are documented.
+- Supported NVIDIA targets currently use Jetson Orin hardware with JetPack 6.2.1. Consult the supported-platform page for the tested device list.
+- VHT 2.0 runs on an Ubuntu 24.04 LTS developer host and uses Docker-native workflows to deploy to prepared targets.
+- Do not infer support for every Arm system, operating system, accelerator, carrier board, or deployment topology from the general runtime-target model.
+- This documentation does not by itself grant production access or certify a proposed deployment. Third-party runtime enablement, VeeaCloud services, support, and production use depend on an approved account, supported configuration, and applicable Veea agreement.

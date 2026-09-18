@@ -1,0 +1,9 @@
+services:
+  vht-docs:
+    build:
+      context: .
+    container_name: vht-docs
+    restart: unless-stopped
+    ports:
+      - "0.0.0.0:8080:80"
+
