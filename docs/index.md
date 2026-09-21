@@ -79,30 +79,6 @@ hide:
   </section>
   </header>
 
-  <section class="docs-welcome-video" aria-labelledby="welcome-video-title">
-    <div class="docs-welcome-video__frame">
-      <video controls preload="none" playsinline poster="assets/video/veeaone-welcome-poster02.webp.jpg" aria-label="Welcome to the VeeaONE developer platform">
-        <source src="assets/video/veeaone-welcome-draft-web-02.mp4" type="video/mp4" />
-        Your browser does not support HTML5 video. <a href="assets/video/veeaone-welcome-draft-web-02.mp4">Open the welcome video</a> instead.
-      </video>
-      <div class="docs-welcome-video__prompt" aria-hidden="true">
-        <span>New to VeeaONE?</span>
-        <strong><i class="fa-solid fa-circle-play"></i> Watch the platform welcome</strong>
-      </div>
-    </div>
-    <div class="docs-welcome-video__copy">
-      <p class="docs-kicker">Start with the platform</p>
-      <h2 id="welcome-video-title">Welcome to the VeeaONE developer platform.</h2>
-      <p>
-        Get a concise introduction to VeeaONE Runtime, VeeaHubs, qualified runtime targets, and the VHT workflow for building and operating applications and AI workloads across the Veea edge.
-      </p>
-      <div class="docs-welcome-video__links">
-        <a href="platform/veeone-runtime/">Explore VeeaONE Runtime <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-        <a href="vht-2.0/quickstart/">Run the quickstart <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-      </div>
-    </div>
-  </section>
-
   <section class="docs-section docs-why">
     <div class="docs-section__head">
       <div class="docs-heading">
